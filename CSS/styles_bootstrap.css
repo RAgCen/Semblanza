@@ -1,0 +1,189 @@
+/* Reset y configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('space.webp');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Configuración de frase inicial que cubre la pantalla */
+.frase {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 0.75cm;
+    text-align: center;
+    font-size: 100px;
+    letter-spacing: 0.3rem;
+    color: white;
+    width: 100%;
+}
+
+/*==================*/
+/* Configuración de imagen, datos de contacto y semblanza */
+/*==================*/
+
+/* Cuadro izquierdo de fondo */
+.recuadro-izquierdo {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenPersonal img {
+    margin-top: 1rem;
+    height: 160px;
+    width: 125px;
+    border-radius: 40%;
+}
+
+.nombre {
+    margin-top: 25px;
+    color: black;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20pt;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.datos-contacto {
+    text-align: center;
+    margin-top: 5px;
+    color: #000;
+    font-size: 1rem;
+}
+
+.recuadro-derecho {
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.cuadro-texto1, .cuadro-texto2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: justify;
+}
+
+/*==================*/
+/* Configuración de aptitudes y habilidades */
+/*==================*/
+.banner-aptitudes,
+.banner-habilidades {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    margin-top: 65px;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cuadro-aptitudes,
+.cuadro-habilidades {
+    color: white;
+    margin-top: 10px;
+    font-size: 28px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 300px;
+}
+
+/*==================*/
+/* Configuración del carrusel con bootstrap */
+/*==================*/
+.banner-certificados {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#certificadosCarousel {
+    max-width: 850px;
+    margin: 0 auto 3rem auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+#certificadosCarousel img {
+    height: 500px;
+    object-fit: contain;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+    background-size: 100% 100%;
+}
+
+/* === Utilidades personalizadas responsivas === */
+@media (max-width: 992px) {
+    .frase {
+        font-size: 80px;
+        letter-spacing: 0.1rem;
+    }
+
+    .cuadro-texto1,
+    .cuadro-texto2 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .cuadro-aptitudes,
+    .cuadro-habilidades {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    #certificadosCarousel img {
+        height: auto;
+        max-height: 375px;
+    }
+}
+
+@media (max-width: 576px) {
+    .frase {
+        font-size: 30px;
+    }
+    
+    .cuadro-texto1,
+    .cuadro-texto2 {
+        font-size: 18px;
+    }
+
+    .banner-aptitudes,
+    .banner-habilidades,
+    .banner-certificados {
+        font-size: 2rem;
+    }
+
+    .cuadro-aptitudes,
+    .cuadro-habilidades {
+        font-size: 1rem;
+    }
+}
